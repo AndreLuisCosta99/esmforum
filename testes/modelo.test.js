@@ -25,6 +25,7 @@ test('Testando cadastro de três perguntas', () => {
 });
 
 test('Testando respostas', () => {
+   const perguntas = modelo.listar_perguntas(); 
  modelo.cadastrar_resposta(perguntas[0].id_pergunta,'2');
   const respostas = modelo.listar_repostas(); 
   expect(repostas.length).toBe(1);
